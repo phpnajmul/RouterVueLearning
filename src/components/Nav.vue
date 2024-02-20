@@ -4,8 +4,8 @@
 
 <template>
   <div>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
   </div>
 </template>
 
