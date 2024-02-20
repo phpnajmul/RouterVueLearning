@@ -8,6 +8,11 @@ import {useRoute, useRouter} from "vue-router";
 
   const car = cars.find(c => c.id === carId)
 
+  const showContact = () => {
+    if (carId === 4) return;
+      return router.push(`/cars/${carId}/contact`)
+  }
+
 </script>
 
 <template>
@@ -16,7 +21,7 @@ import {useRoute, useRouter} from "vue-router";
   <p>{{car.name}}</p>
   <p>{{car.year}}</p>
   <p>{{car.price}}</p>
-  <button @click="router.push(`/cars/${carId}/contact`)">click for contact</button>
+  <button @click="showContact">click for contact</button>
   <RouterView />
 </div>
 </template>
